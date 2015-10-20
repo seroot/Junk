@@ -1,10 +1,14 @@
 # AROMODEL
 #### For a more indepth look at AROMODEL look at DETAIL.md
 Parses avogadro created .cml files
+
 Performs electronic structure calculations using NWCHEM
+
 Performs MD simulations using LAMMPS
+
 Meant for use on XSEDE National Supercomputing Resources
 
+Developed by Samuel Root, and CJ Pais
 
 Uses a command line argument specifying the location of the file to parse.
 It doesn't check the filename for the extention cml, so be sure it is a cml
