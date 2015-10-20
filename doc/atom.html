@@ -1,0 +1,116 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module atom</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>atom</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/cjpais/Documents/Sam Research/gitWork/cmlparser_py/atom.py">/Users/cjpais/Documents/Sam Research/gitWork/cmlparser_py/atom.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="atom.html#Atom">Atom</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Atom">class <strong>Atom</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Docstring&nbsp;for&nbsp;<a href="#Atom">Atom</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Atom-__init__"><strong>__init__</strong></a>(self, atom_id, atom_type, x_pos, y_pos, z_pos)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>atom_bonds</strong> = []</dl>
+
+<dl><dt><strong>atom_id</strong> = ''</dl>
+
+<dl><dt><strong>atom_type</strong> = ''</dl>
+
+<dl><dt><strong>dihedral</strong> = False</dl>
+
+<dl><dt><strong>numbonds</strong> = 0</dl>
+
+<dl><dt><strong>opls_bondid</strong> = 0</dl>
+
+<dl><dt><strong>opls_epsilon</strong> = 0</dl>
+
+<dl><dt><strong>opls_id</strong> = 0</dl>
+
+<dl><dt><strong>opls_mass</strong> = 0</dl>
+
+<dl><dt><strong>opls_partial</strong> = 0</dl>
+
+<dl><dt><strong>opls_sigma</strong> = 0</dl>
+
+<dl><dt><strong>print_type</strong> = 0</dl>
+
+<dl><dt><strong>ring</strong> = False</dl>
+
+<dl><dt><strong>x_pos</strong> = 0.0</dl>
+
+<dl><dt><strong>y_pos</strong> = 0.0</dl>
+
+<dl><dt><strong>z_pos</strong> = 0.0</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-create_atoms"><strong>create_atoms</strong></a>(atom)</dt><dd><tt>Creates&nbsp;the&nbsp;atom&nbsp;objects<br>
+&nbsp;<br>
+Keyword&nbsp;Arguments:<br>
+atom&nbsp;-&nbsp;A&nbsp;list&nbsp;of&nbsp;atom&nbsp;data</tt></dd></dl>
+ <dl><dt><a name="-get_type"><strong>get_type</strong></a>(atom, type)</dt><dd><tt>Gets&nbsp;the&nbsp;type&nbsp;of&nbsp;unique&nbsp;atoms&nbsp;it&nbsp;is&nbsp;for&nbsp;lammps&nbsp;output<br>
+&nbsp;<br>
+Keyword&nbsp;Arguments:<br>
+atom&nbsp;-&nbsp;The&nbsp;list&nbsp;of&nbsp;atom&nbsp;objects<br>
+type&nbsp;-&nbsp;The&nbsp;list&nbsp;of&nbsp;unique&nbsp;types</tt></dd></dl>
+ <dl><dt><a name="-periodic_b_size"><strong>periodic_b_size</strong></a>(atom)</dt><dd><tt>Finds&nbsp;a&nbsp;good&nbsp;periodic&nbsp;boundary&nbsp;size&nbsp;for&nbsp;lammps&nbsp;output.&nbsp;Finds&nbsp;min&nbsp;and&nbsp;max<br>
+for&nbsp;x,y,z&nbsp;data&nbsp;from&nbsp;the&nbsp;atoms<br>
+&nbsp;<br>
+Keyword&nbsp;Arguments:<br>
+atom&nbsp;-&nbsp;The&nbsp;list&nbsp;of&nbsp;atom&nbsp;objects&nbsp;to&nbsp;get&nbsp;x,y,z&nbsp;positional&nbsp;data&nbsp;from.</tt></dd></dl>
+ <dl><dt><a name="-uniq_types"><strong>uniq_types</strong></a>(atom)</dt><dd><tt>Gets&nbsp;the&nbsp;unique&nbsp;type&nbsp;of&nbsp;atoms&nbsp;for&nbsp;lammps&nbsp;output<br>
+&nbsp;<br>
+Keyword&nbsp;Arguments:<br>
+atom&nbsp;-&nbsp;The&nbsp;list&nbsp;of&nbsp;atom&nbsp;objects&nbsp;to&nbsp;get&nbsp;unique&nbsp;types&nbsp;from</tt></dd></dl>
+</td></tr></table>
+</body></html>

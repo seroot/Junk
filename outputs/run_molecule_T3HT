@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --job-name="cmlparser_run"
+#SBATCH --output="job.%j.%N.out"
+#SBATCH --partition=compute
+#SBATCH --nodes=
+#SBATCH --ntasks-per-node=24
+#SBATCH -t 
+#SBATCH -A csd459
+module load python lammps openbabel qchem
+cd /oasis/scratch/comet/cjpais/temp_project/cmlparser_py/outputs
+export OMP_NUM_THREADS=1
+ibrun -np  lammps < in.molecule_T3HT

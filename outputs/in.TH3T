@@ -1,0 +1,47 @@
+# created by CMLParser
+
+units real
+atom_style full
+boundary p p p
+bond_style harmonic
+dielectric 4.81
+pair_style lj/cut/coul/long 20.0
+angle_style harmonic
+dihedral_style opls
+special_bonds lj 0 1 1
+improper_style none
+kspace_style ewald 10
+read_data data.TH3T
+thermo_style custom step temp press ke pe etotal density
+dump 1 all custom 200 TH3T.lammpstrj id type mol xs ys zs vx vy vz
+neighbor 10.0 bin
+neigh_modify every 1 delay 0 one 10000
+fix 3 ring rigid molecule iso 1 1 1000
+fix 0 all langevin 300 300 100 43294
+fix 1 all nph iso 1 1 1000 drag 2
+fix 2 all momentum 1 linear 1 1 1
+velocity all create 100.00000 1223
+timestep 1
+thermo 100
+run 10000
+unfix 0
+unfix 1
+unfix 2
+unfix 3
+write_restart restart.TH3T
+
+
+replicate 5 5 5
+undump 1
+fix 3 test rigid/nph/small molecule iso 1 1 1000
+fix 0 all langevin 300 300 100 43294
+fix 1 chain nph iso 1 1 1000 drag 2     # note the chain group
+fix 2 chain momentum 1 linear 1 1 1
+velocity all create 100.00000 1223
+dump 2 all custom 1000 TH3T_final.lammpstrj id type mol xs ys zs vx vy vz
+run 500000
+write_restart restart.TH3T_final
+unfix 0
+unfix 1
+unfix 2
+unfix 3

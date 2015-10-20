@@ -1,0 +1,11 @@
+fix bugs
+
+test qchem
+dihedral double counting
+matplotlib for python plotting data
+
+p3ht
+monomer class - make polymer from monomer. thiophene rings...
+polymer class - how many chain
+
+RINGS.
